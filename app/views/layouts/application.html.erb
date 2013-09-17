@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Boomerang</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<h1>
+  Boomerang Beach House 
+  <button class='btn btn-danger btn-mini' id='rent_it_now'>
+    <strong>RENT</strong>
+  </button>
+</h1>
+<div class='row-fluid'>
+  <div class='span6 offset3'>
+    <ul class="nav nav-pills">
+      <li class="active"><%= link_to 'Home', root_path %></li>
+      <li><a href="#">Boomerang Beach</a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><%= link_to 'Location', locations_path %></li>
+      <li><a href="#">Local activities</a></li>
+      <li><a href="#">Find Us</a></li>
+      <li><a href="#">Book Us Now</a></li>
+    </ul>
+  </div>
+</div>
+<%= yield %>
+<%= yield :scripts %>
+</body>
+</html>
